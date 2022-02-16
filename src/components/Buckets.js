@@ -12,7 +12,6 @@ const Buckets = ({notes,handleCreateNote,handleDeleteNote}) => {
             {buckets.map(bucket => {
                 return (
                     <div>
-                        <Droppable>
                         <h1>{bucket}</h1>
                         <NotesList 
                             notes = {notes.filter(note => note.group === bucket)} 
@@ -20,7 +19,6 @@ const Buckets = ({notes,handleCreateNote,handleDeleteNote}) => {
                             handleDeleteNote = {handleDeleteNote}
                             bucket = {bucket}
                             />
-                        </Droppable>
                     </div>
                 )
             })}
